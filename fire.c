@@ -37,7 +37,7 @@ int main(void) {
 				min = tmp;
 		}
 
-		printf("%d\n", answer);
+		printf("%d\n", min);
 	}
 
 	return 0;
