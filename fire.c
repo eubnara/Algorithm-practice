@@ -12,8 +12,8 @@ int main(void) {
 	int cost[MAX_N];	//N개의 각 봉화대 후보지점의 공사비용
 	scanf("%d", &T);
 	while (T--) {
-		int answer = MAX_INT;
 		scanf("%d %d", &N, &P);
+			
 		//헷갈리지 않게 index는 1부터 시작한다.
 		for (int i = 1; i <= N; i++)
 			scanf("%d", &cost[i]);
@@ -23,22 +23,20 @@ int main(void) {
 		for (int i = P+1; i <= N; i++) {
 			int min = MAX_INT;
 			for (int j = 1; j <= P; j++) {
-				int tmp = cost[i] + cost[i - j];
+				int tmp = cost[i - j];
 				if (tmp < min)
 					min = tmp;
 			}
-			cost[i] = min;
-			if(i>=(N-P+1) && answer > min)
-				answer = min;
+			cost[i] += min;
 		}
-/*
+
 		int min = MAX_INT;
 		for (int i = 0; i < P; i++){
 			int tmp = cost[N - i];
 			if (tmp < min)
 				min = tmp;
 		}
-*/
+
 		printf("%d\n", answer);
 	}
 
