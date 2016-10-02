@@ -11,16 +11,16 @@ public:
 	node() : color(0)
 	{}
 };
-//Àç±ÍÀûÀ¸·Î ÀÔ·ÂÀ» ¹Ş±âÀ§ÇÑ ÇÔ¼ö
+//ì¬ê·€ì ìœ¼ë¡œ ì…ë ¥ì„ ë°›ê¸°ìœ„í•œ í•¨ìˆ˜
 node* getInput();
 
-//»óÇÏ¹İÀüÀ» ÇØÁÖ´Â ÇÔ¼ö
+//ìƒí•˜ë°˜ì „ì„ í•´ì£¼ëŠ” í•¨ìˆ˜
 void turnOver(node& start);
 
-//°á°ú¹° ÇÁ¸°Æ®ÇÏ´Â ÇÔ¼ö, µ¿ÀûÇÒ´ç ¹İÈ¯µµ ¿©±â¼­ Ã³¸®
+//ê²°ê³¼ë¬¼ í”„ë¦°íŠ¸í•˜ëŠ” í•¨ìˆ˜, ë™ì í• ë‹¹ ë°˜í™˜ë„ ì—¬ê¸°ì„œ ì²˜ë¦¬
 void printAll(node& start);
 
-//µ¿ÀûÇÒ´ç ¹İÈ¯ÇÏ´Â ÇÔ¼ö
+//ë™ì í• ë‹¹ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜
 //void deallocate(node& start);
 
 int main(void) {
@@ -62,7 +62,7 @@ void turnOver(node& start){
 		for (list<node*>::iterator it = start.children.begin(); it != start.children.end(); it++){
 			turnOver(*(*it));	//*it ==> node*
 		}
-		//(1,3) (2,4) ÀÚ¸®¹Ù²Ù±â
+		//(1,3) (2,4) ìë¦¬ë°”ê¾¸ê¸°
 		node* tmp;
 		tmp = start.children.front();
 		start.children.pop_front();
