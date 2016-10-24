@@ -1,6 +1,4 @@
 /*
- * testing
- * testing
  * author: yubi Lee
  * date: 2016-10-22
  * problem: 1126
