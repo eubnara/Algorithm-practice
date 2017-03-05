@@ -1,2 +1,7 @@
 # Algorithm-practice
-프로그래밍 대회 대비
+
+ - 알고리즘 공부
+ 
+### 동기들과 같이 진행한 알고리즘 풀이
+
+ - https://github.com/eubnaraAlgorithmStudy/400617
